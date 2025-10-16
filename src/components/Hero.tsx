@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import butterflyLogo from "@/assets/butterfly.png";
 
 const Hero = () => {
   const scrollToServices = () => {
@@ -11,8 +12,18 @@ const Hero = () => {
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary/20 via-transparent to-transparent"></div>
       
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-8 md:py-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+          {/* Logo */}
+          <div className="flex justify-center">
+            <img
+              src={birdSafe(butterflyLogo)}
+              alt="Rhymes Butterflies logo"
+              className="h-56 w-56 md:h-80 md:w-80 lg:h-96 lg:w-96 object-contain drop-shadow-sm"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
           {/* Heading */}
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
             Transform Your Life Through
@@ -79,3 +90,8 @@ const Hero = () => {
 };
 
 export default Hero;
+
+// Ensures the built asset path is a non-empty string for older bundlers/environments
+function birdSafe(path: string) {
+  return path || "";
+}
