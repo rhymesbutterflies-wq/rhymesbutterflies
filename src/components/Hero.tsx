@@ -19,47 +19,47 @@ const Hero = () => {
             <img
               src={birdSafe(butterflyLogo)}
               alt="Rhymes Butterflies logo"
-              className="h-56 w-56 md:h-80 md:w-80 lg:h-96 lg:w-96 object-contain drop-shadow-sm"
+              className="h-40 w-40 sm:h-48 sm:w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 xl:h-96 xl:w-96 object-contain drop-shadow-sm"
               loading="eager"
               decoding="async"
             />
           </div>
           {/* Heading */}
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight px-4">
             Transform Your Life Through
-            <span className="block mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
               Spiritual Healing
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="font-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="font-sans text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
             Discover inner peace and overcome life's challenges with our gentle, 
             transformative healing solutions tailored to your unique journey
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-4 sm:pt-6 px-4">
             <Button 
               size="lg"
               onClick={scrollToServices}
-              className="bg-primary hover:bg-primary-glow text-primary-foreground font-sans font-medium text-base px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-primary-glow text-primary-foreground font-sans font-medium text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               Explore Our Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
             <Button 
               size="lg"
               variant="outline"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-sans font-medium text-base px-8 py-6 rounded-full transition-all duration-300 hover:scale-105"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-sans font-medium text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6 rounded-full transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               Book a Session
             </Button>
           </div>
 
           {/* Trust indicators */}
-          <div className="pt-12 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
+          <div className="pt-8 sm:pt-12 flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 text-xs sm:text-sm text-muted-foreground px-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
               <span>Professional Care</span>

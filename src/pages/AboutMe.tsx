@@ -14,15 +14,15 @@ const AboutMe = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <div className="inline-block">
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
                 Meet{" "}
                 <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                   Stephy
                 </span>
               </h1>
-              <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
+              <div className="h-1 w-16 sm:w-20 md:w-24 bg-gradient-to-r from-primary to-secondary mx-auto mt-2 sm:mt-4 rounded-full"></div>
             </div>
-            <p className="font-sans text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="font-sans text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               Your compassionate guide on the journey to spiritual healing and personal transformation
             </p>
           </div>
@@ -34,14 +34,14 @@ const AboutMe = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             {/* Profile Picture */}
-            <div className="flex justify-center mb-12 mt-16">
+            <div className="flex justify-center mb-8 sm:mb-12 mt-8 sm:mt-16">
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-500"></div>
-                <div className="relative w-96 h-96 rounded-full bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-4 border-primary/20 flex items-center justify-center shadow-2xl">
+                <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-500"></div>
+                <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-2 sm:border-4 border-primary/20 flex items-center justify-center shadow-2xl">
                   <img
                     src={stephyImage}
                     alt="Stephy See - Clinical Psychotherapist"
-                    className="w-92 h-92 rounded-full object-cover object-top shadow-xl ring-4 ring-background aspect-square"
+                    className="w-56 h-56 sm:w-72 sm:h-72 md:w-92 md:h-92 rounded-full object-cover object-top shadow-xl ring-2 sm:ring-4 ring-background aspect-square"
                   />
                 </div>
               </div>
@@ -49,50 +49,50 @@ const AboutMe = () => {
 
             {/* About Text */}
             <Card className="border-2 border-primary/20 shadow-2xl bg-gradient-to-br from-background to-primary/5">
-              <CardContent className="p-12">
+              <CardContent className="p-4 sm:p-6 md:p-8 lg:p-12">
                 <div className="prose prose-lg max-w-none">
-                  <div className="text-center mb-8">
-                    <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
                       Professional Journey
                     </h2>
-                    <div className="h-1 w-16 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                    <div className="h-1 w-12 sm:w-16 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
                   </div>
                   
-                  <div className="space-y-6">
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                  <div className="space-y-4 sm:space-y-6">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                       I'm <span className="font-semibold text-primary">Stephy See</span>, a Clinical Psychotherapist and a proud member of the British Society of Clinical Hypnotherapy and Integrative Psychotherapy (BSCHIP).
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                       I hold an Advanced Practitioner Diploma in Integrative Psychotherapy and a Master's Degree in Business Administration (MBA), blending psychological understanding with holistic leadership.
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                       With a Diploma in Interior Architecture, I've always been inspired to create harmony — both in physical spaces and within the human heart.
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                       Alongside my clinical practice, I am a certified Nagomi Art Instructor (JPHAA) and hold professional certifications in Art Therapy, OH Card Facilitation, Tarot Reading, Singing Bowl Healing, Numerology, and Reiki Healing. I also serve as a Comprehensive Consultant for AGT DNA, integrating creative education and genetic insight to support emotional growth and self-awareness.
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                       My approach blends <span className="font-semibold text-secondary">science and soul</span> — combining evidence-based psychotherapy with intuitive and mindful healing tools to help individuals explore emotions, release stress, and reconnect with inner peace.
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                       I'm also a Licensed Train-the-Trainer (TTT) Facilitator, and all my workshops are HRD Corp Claimable, designed to support both individuals and organizations in cultivating emotional balance, creativity, and transformation.
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                       As a Key Opinion Leader (KOL), I have collaborated with well-known brands such as <span className="font-semibold text-accent">Getha, Babyya, JustPets, Plant Therapy, Absolute Genetic Technologies</span>, and more — promoting holistic living, emotional wellness, and mindful growth.
                     </p>
                     
-                    <p className="text-muted-foreground leading-relaxed text-lg">
+                    <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                       My professional journey and contributions will be featured in <span className="font-semibold text-primary">Britishpedia's 7th Edition</span>, recognizing individuals who make a positive impact in their fields.
                     </p>
                     
-                    <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 p-6 rounded-xl border border-primary/20 mt-8">
-                      <p className="text-muted-foreground leading-relaxed text-lg">
+                    <div className="bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 p-4 sm:p-6 rounded-xl border border-primary/20 mt-6 sm:mt-8">
+                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
                         I'm also the creator of <span className="font-semibold text-primary">Rhymes Butterflies Tea</span>, a legally protected wellness tea brand where each flavour carries its own emotional symbol — designed to evoke calm, joy, love, or balance through taste and intention. Every blend tells a story, reminding us that healing can begin with something as gentle and meaningful as a sip of tea.
                       </p>
                     </div>
@@ -102,28 +102,28 @@ const AboutMe = () => {
             </Card>
 
             {/* Call to Action */}
-            <div className="mt-20 text-center">
+            <div className="mt-12 sm:mt-16 md:mt-20 text-center">
               <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 shadow-2xl">
-                <CardContent className="p-12">
-                  <div className="space-y-6">
+                <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12">
+                  <div className="space-y-4 sm:space-y-6">
                     <div className="inline-block">
-                      <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
+                      <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-2 sm:mb-4">
                         Ready to Begin Your Healing Journey?
                       </h3>
-                      <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                      <div className="h-1 w-12 sm:w-16 md:w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
                     </div>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-4">
                       I'm here to support you every step of the way. Let's work together 
                       to unlock your potential and create lasting positive change in your life.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4">
                       <a
                         href="https://wa.me/60162867678?text=Hi! I'm interested in your spiritual healing services. Can you tell me more?"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-sans font-semibold text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                        className="inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-sans font-semibold text-sm sm:text-base md:text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                       >
-                        <span className="mr-3 text-xl">💬</span>
+                        <span className="mr-2 sm:mr-3 text-lg sm:text-xl">💬</span>
                         Start Your Journey
                       </a>
                     </div>

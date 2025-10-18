@@ -11,15 +11,15 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-card">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
               Begin Your Journey
             </h2>
-            <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-sans text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Take the first step toward transformation. We're here to support you every step of the way.
             </p>
           </div>
