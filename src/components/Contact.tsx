@@ -1,32 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "60133113943"; // Malaysian phone number format
+    const message = "Hi! I'm interested in your spiritual healing services. Can you tell me more?";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -44,81 +25,30 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* WhatsApp Contact */}
             <Card className="border-2">
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block font-sans text-sm font-medium text-foreground mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border-2 border-input bg-background text-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
-                      placeholder="Your name"
-                    />
+              <CardContent className="p-8 text-center">
+                <div className="space-y-6">
+                  <div className="p-4 rounded-full bg-green-100 w-fit mx-auto">
+                    <MessageCircle className="h-12 w-12 text-green-600" />
                   </div>
-
                   <div>
-                    <label htmlFor="email" className="block font-sans text-sm font-medium text-foreground mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border-2 border-input bg-background text-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
-                      placeholder="your.email@example.com"
-                    />
+                    <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
+                      Chat with Us on WhatsApp
+                    </h3>
+                    <p className="text-muted-foreground mb-6">
+                      Get instant support and start your healing journey today. 
+                      Click below to message us directly on WhatsApp.
+                    </p>
                   </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block font-sans text-sm font-medium text-foreground mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border-2 border-input bg-background text-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
-                      placeholder="(555) 123-4567"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block font-sans text-sm font-medium text-foreground mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={4}
-                      className="w-full px-4 py-3 rounded-lg border-2 border-input bg-background text-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none"
-                      placeholder="Tell us how we can help you..."
-                    />
-                  </div>
-
                   <Button 
-                    type="submit"
-                    className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-sans font-medium py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+                    onClick={handleWhatsAppClick}
+                    className="w-full bg-green-600 hover:bg-green-700 text-white font-sans font-medium py-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
                   >
-                    Send Message
-                    <Send className="ml-2 h-5 w-5" />
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    Start WhatsApp Chat
                   </Button>
-                </form>
+                </div>
               </CardContent>
             </Card>
 
