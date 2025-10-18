@@ -131,7 +131,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-sans font-semibold text-foreground mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">info@rhymesbutterflies.com</p>
+                    <p className="text-muted-foreground">stephy.rhymesbutterflies@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
@@ -143,7 +143,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-sans font-semibold text-foreground mb-1">Call Us</h3>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-muted-foreground">(013) 311-3943</p>
                   </div>
                 </CardContent>
               </Card>
@@ -163,8 +163,8 @@ const Contact = () => {
               <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-2 border-primary/20">
                 <p className="font-sans text-sm text-muted-foreground leading-relaxed">
                   <strong className="text-foreground">Office Hours:</strong><br />
-                  Monday - Friday: 9:00 AM - 6:00 PM<br />
-                  Saturday: 10:00 AM - 4:00 PM<br />
+                  Monday - Friday: 9:00 AM - 7:00 PM<br />
+                  Saturday: 9:00 AM - 7:00 PM<br />
                   Sunday: Closed
                 </p>
               </div>
