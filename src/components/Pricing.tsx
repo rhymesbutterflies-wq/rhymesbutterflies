@@ -63,7 +63,7 @@ const Pricing = () => {
       title: "Nagomi Art Workshop",
       items: [
         { label: "Price", price: "RM 138", note: "per drawing" },
-        { label: "Availability", price: "In-person or group", note: "based on schedule" },
+        { label: "Availability", price: "In-person/group", note: "based on schedule" },
       ],
       color: "text-accent",
     },
