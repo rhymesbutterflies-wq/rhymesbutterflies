@@ -90,14 +90,15 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {pricingOptions.map((option, index) => {
-            const Icon = option.icon;
-            return (
-              <Card
-                key={index}
-                className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-primary/20 relative overflow-hidden group flex flex-col h-full"
-              >
+        <div className="overflow-x-auto pb-4 -mx-4 px-4">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 min-w-max md:min-w-0">
+            {pricingOptions.map((option, index) => {
+              const Icon = option.icon;
+              return (
+                <Card
+                  key={index}
+                  className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-primary/20 relative overflow-hidden group flex flex-col h-full min-w-[280px] md:min-w-0"
+                >
                 {option.badge && (
                   <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                     {option.badge}
@@ -131,17 +132,18 @@ const Pricing = () => {
             );
           })}
         </div>
+      </div>
 
         {/* Complimentary Consultation Card */}
-        <Card className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/30 max-w-4xl mx-auto">
-          <div className="flex items-start gap-4">
-            <Gift className="w-12 h-12 text-primary flex-shrink-0" />
-            <div className="flex-1">
-              <h3 className="text-2xl font-serif font-semibold mb-3 flex items-center gap-2">
-                Complimentary Consultation
-                <span className="text-sm bg-primary text-primary-foreground px-3 py-1 rounded-full">RM 688 Value</span>
+        <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/30 max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-start gap-4">
+            <Gift className="w-10 h-10 md:w-12 md:h-12 text-primary flex-shrink-0" />
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl md:text-2xl font-serif font-semibold mb-3 flex flex-col sm:flex-row sm:items-center gap-2">
+                <span>Complimentary Consultation</span>
+                <span className="text-xs md:text-sm bg-primary text-primary-foreground px-3 py-1 rounded-full whitespace-nowrap w-fit">RM 688 Value</span>
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm md:text-base text-muted-foreground break-words">
                 Clients who have completed the DNA AGT Test will receive a comprehensive 1-hour consultation with Stephy, valued at RM 688, free of charge.
               </p>
             </div>
