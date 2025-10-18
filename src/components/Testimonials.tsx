@@ -1,5 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Testimonials = () => {
   const testimonials = [
@@ -17,6 +24,11 @@ const Testimonials = () => {
         name: "JC Prints Studio",
         rating: 5,
         text: "Stephy is a experience educator , she gave good consultation & advice for people. Proffesional and her advise guide people to have a better vision . I would recommend Stephy to more people to know about her qualifications and psychotherapist service as well . Therefore, I highly recommend Stephy psychotherapist and educator proffesion .she created a supportive and encouraging environment that fostered people growth and development"
+    },
+    {
+      name: "Ms Joyce",
+      rating: 5,
+      text: "Ms Stephy is a proffesional family therapy and child therapy of mine. I am thankful because i am healed from depression and anxiety without taking medication. I will recommend her to more people. Thank you Ms Stephy."
     }
   ];
 
@@ -35,44 +47,52 @@ const Testimonials = () => {
             <div className="h-1 w-16 sm:w-20 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
           </div>
 
-          {/* Testimonials Grid */}
-          {/* Testimonials Grid */}
-<div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto items-stretch justify-items-center">
-  {testimonials.map((testimonial, index) => (
-    <Card
-      key={index}
-      className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg bg-gradient-to-br from-background to-primary/5 flex flex-col w-full max-w-sm"
-    >
-      <CardContent className="p-4 sm:p-6 flex flex-col flex-1">
-        <div className="flex flex-col h-full">
-          {/* Quote Icon */}
-          <div className="flex justify-start mb-4">
-            <Quote className="h-6 w-6 text-primary/60" />
-          </div>
+          {/* Testimonials Carousel */}
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg bg-gradient-to-br from-background to-primary/5 h-full">
+                    <CardContent className="p-4 sm:p-6 flex flex-col h-full">
+                      <div className="flex flex-col h-full">
+                        {/* Quote Icon */}
+                        <div className="flex justify-start mb-4">
+                          <Quote className="h-6 w-6 text-primary/60" />
+                        </div>
 
-          {/* Rating */}
-          <div className="flex items-center gap-1 mb-4">
-            {[...Array(testimonial.rating)].map((_, i) => (
-              <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-            ))}
-          </div>
+                        {/* Rating */}
+                        <div className="flex items-center gap-1 mb-4">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
 
-          {/* Testimonial Text */}
-          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed italic flex-1 mb-4">
-            "{testimonial.text}"
-          </p>
+                        {/* Testimonial Text */}
+                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed italic flex-1 mb-4">
+                          "{testimonial.text}"
+                        </p>
 
-          {/* Client Info */}
-          <div className="pt-2 border-t border-primary/10 mt-auto">
-            <h4 className="font-sans font-semibold text-foreground text-sm sm:text-base">
-              {testimonial.name}
-            </h4>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  ))}
-</div>
+                        {/* Client Info */}
+                        <div className="pt-2 border-t border-primary/10 mt-auto">
+                          <h4 className="font-sans font-semibold text-foreground text-sm sm:text-base">
+                            {testimonial.name}
+                          </h4>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 bg-background border-primary/30 hover:bg-primary/10" />
+            <CarouselNext className="hidden md:flex -right-12 bg-background border-primary/30 hover:bg-primary/10" />
+          </Carousel>
 
 
           {/* Call to Action */}

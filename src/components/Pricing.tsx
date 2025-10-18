@@ -1,6 +1,13 @@
 import { Brain, Sprout, Gem, Heart, Baby, Sparkles, Palette, Music, Gift } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Pricing = () => {
   const pricingOptions = [
@@ -63,7 +70,7 @@ const Pricing = () => {
       title: "Nagomi Art Workshop",
       items: [
         { label: "Price", price: "RM 138", note: "per drawing" },
-        { label: "Availability", price: "In-person/group", note: "based on schedule" },
+        { label: "Availability", price: "In-person or group", note: "based on schedule" },
       ],
       color: "text-accent",
     },
@@ -90,49 +97,56 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="overflow-x-auto pb-4 -mx-4 px-4">
-          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 min-w-max md:min-w-0">
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-7xl mx-auto mb-12"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
             {pricingOptions.map((option, index) => {
               const Icon = option.icon;
               return (
-                <Card
-                  key={index}
-                  className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-primary/20 relative overflow-hidden group flex flex-col h-full min-w-[280px] md:min-w-0"
-                >
-                {option.badge && (
-                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                    {option.badge}
-                  </div>
-                )}
-                <div className="mb-4">
-                  <Icon className={`w-12 h-12 ${option.color} mb-3`} />
-                  <h3 className="text-xl font-serif font-semibold mb-4">{option.title}</h3>
-                </div>
-                <div className="space-y-3 flex-grow">
-                  {option.items.map((item, idx) => (
-                    <div key={idx} className="border-t border-border pt-3 first:border-t-0 first:pt-0">
-                      <div className="flex justify-between items-start mb-1">
-                        <span className="text-sm text-muted-foreground">{item.label}</span>
-                        <span className="font-semibold text-foreground">{item.price}</span>
-                      </div>
-                      {item.note && (
-                        <p className="text-xs text-muted-foreground">{item.note}</p>
-                      )}
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-[280px] sm:basis-1/2 lg:basis-1/3">
+                  <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-primary/20 relative overflow-hidden group flex flex-col h-full">
+                  {option.badge && (
+                    <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                      {option.badge}
                     </div>
-                  ))}
-                </div>
-                <Button 
-                  className="w-full mt-6" 
-                  variant="outline"
-                  onClick={() => window.open('https://wa.me/60162867678', '_blank')}
-                >
-                  Book Now
-                </Button>
-              </Card>
-            );
-          })}
-        </div>
-      </div>
+                  )}
+                  <div className="mb-4">
+                    <Icon className={`w-12 h-12 ${option.color} mb-3`} />
+                    <h3 className="text-xl font-serif font-semibold mb-4">{option.title}</h3>
+                  </div>
+                  <div className="space-y-3 flex-grow">
+                    {option.items.map((item, idx) => (
+                      <div key={idx} className="border-t border-border pt-3 first:border-t-0 first:pt-0">
+                        <div className="flex justify-between items-start mb-1">
+                          <span className="text-sm text-muted-foreground">{item.label}</span>
+                          <span className="font-semibold text-foreground">{item.price}</span>
+                        </div>
+                        {item.note && (
+                          <p className="text-xs text-muted-foreground">{item.note}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <Button 
+                    className="w-full mt-6" 
+                    variant="outline"
+                    onClick={() => window.open('https://wa.me/60123456789', '_blank')}
+                  >
+                    Book Now
+                  </Button>
+                  </Card>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-12 bg-background border-primary/30 hover:bg-primary/10" />
+          <CarouselNext className="hidden md:flex -right-12 bg-background border-primary/30 hover:bg-primary/10" />
+        </Carousel>
 
         {/* Complimentary Consultation Card */}
         <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/30 max-w-4xl mx-auto">
