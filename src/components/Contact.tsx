@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "60133113943"; // Malaysian phone number format
+    const phoneNumber = "60162867678"; // Malaysian phone number format
     const message = "Hi! I'm interested in your spiritual healing services. Can you tell me more?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
