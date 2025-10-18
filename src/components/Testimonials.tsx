@@ -24,11 +24,6 @@ const Testimonials = () => {
         name: "JC Prints Studio",
         rating: 5,
         text: "Stephy is a experience educator , she gave good consultation & advice for people. Proffesional and her advise guide people to have a better vision . I would recommend Stephy to more people to know about her qualifications and psychotherapist service as well . Therefore, I highly recommend Stephy psychotherapist and educator proffesion .she created a supportive and encouraging environment that fostered people growth and development"
-    },
-    {
-      name: "Ms Joyce",
-      rating: 5,
-      text: "Ms Stephy is a proffesional family therapy and child therapy of mine. I am thankful because i am healed from depression and anxiety without taking medication. I will recommend her to more people. Thank you Ms Stephy."
     }
   ];
 
