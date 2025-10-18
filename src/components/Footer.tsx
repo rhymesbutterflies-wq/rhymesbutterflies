@@ -9,6 +9,9 @@ const Footer = () => {
           <p className="font-sans text-sm text-muted-foreground">
             Transforming lives through spiritual healing and wellness
           </p>
+          <p className="font-sans text-sm text-muted-foreground">
+            Business Registration: TR0319886-A
+          </p>
           <div className="flex justify-center gap-6 text-sm text-muted-foreground">
             <a href="#services" className="hover:text-primary transition-colors">
               Services
