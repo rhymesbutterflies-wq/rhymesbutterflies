@@ -1,3 +1,5 @@
+import licenseImage from "@/assets/license.png";
+
 const Footer = () => {
   return (
     <footer className="bg-foreground/5 border-t border-border py-8">
@@ -12,6 +14,16 @@ const Footer = () => {
           <p className="font-sans text-sm text-muted-foreground">
             Business Registration: TR0319886-A
           </p>
+          
+          {/* License Image */}
+          <div className="flex justify-center py-4">
+            <img
+              src={licenseImage}
+              alt="Professional License"
+              className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
+          
           <div className="flex justify-center gap-6 text-sm text-muted-foreground">
             <a href="#services" className="hover:text-primary transition-colors">
               Services
@@ -20,8 +32,7 @@ const Footer = () => {
             <a href="#contact" className="hover:text-primary transition-colors">
               Contact
             </a>
-            <span>•</span>
-            <span>Privacy Policy</span>
+       
           </div>
           <p className="text-xs text-muted-foreground pt-4">
             © {new Date().getFullYear()} Rhymes Butterflies Solution. All rights reserved.

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import stephyImage from "@/assets/stephy2.jpeg";
+import Footer from "@/components/Footer";
 
 const AboutMe = () => {
   return (
@@ -134,6 +135,7 @@ const AboutMe = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
