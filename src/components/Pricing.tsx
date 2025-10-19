@@ -158,7 +158,7 @@ const Pricing = () => {
                 <span className="text-xs md:text-sm bg-primary text-primary-foreground px-3 py-1 rounded-full whitespace-nowrap w-fit">RM 688 Value</span>
               </h3>
               <p className="text-sm md:text-base text-muted-foreground break-words">
-                Clients who have completed the DNA AGT Test will receive a comprehensive 1-hour consultation with Stephy, valued at RM 688, free of charge.
+                Enjoy a complimentary consultation worth RM688 when you purchase the AGT DNA Test with Stephy.
               </p>
             </div>
           </div>

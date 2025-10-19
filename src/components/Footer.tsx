@@ -1,4 +1,6 @@
 import licenseImage from "@/assets/license.png";
+import hrdbImage from "@/assets/hrdb.png";
+import hdrb1Image from "@/assets/hdrb1.png";
 
 const Footer = () => {
   return (
@@ -14,6 +16,20 @@ const Footer = () => {
           <p className="font-sans text-sm text-muted-foreground">
             Business Registration: TR0319886-A
           </p>
+          
+          {/* HRDB Images */}
+          <div className="flex justify-center gap-4 sm:gap-6 py-4">
+            <img
+              src={hrdbImage}
+              alt="HRDB Certification"
+              className="h-16 sm:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <img
+              src={hdrb1Image}
+              alt="HRDB Certification"
+              className="h-16 sm:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
           
           {/* License Image */}
           <div className="flex justify-center py-4">
