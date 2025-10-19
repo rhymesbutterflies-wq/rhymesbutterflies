@@ -17,26 +17,13 @@ const Footer = () => {
             Business Registration: TR0319886-A
           </p>
           
-          {/* HRDB Images */}
-          <div className="flex justify-center items-center gap-2 sm:gap-4 pt-4 pb-2">
-            <img
-              src={hrdbImage}
-              alt="HRDB Certification"
-              className="h-24 sm:h-28 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity -ml-3"
-            />
-            <img
-              src={hdrb1Image}
-              alt="HRDB Certification"
-              className="h-16 sm:h-20 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity -ml-3"
-            />
-          </div>
           
           {/* License Image */}
           <div className="flex justify-center pt-2 pb-4">
             <img
               src={licenseImage}
               alt="Professional License"
-              className="h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+              className="h-60 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
           </div>
           
