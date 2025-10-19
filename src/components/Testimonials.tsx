@@ -29,6 +29,11 @@ const Testimonials = () => {
       name: "Ms Joyce",
       rating: 5,
       text: "Ms Stephy is a professional family therapy and child therapy of mine. I am thankful because i am healed from depression and anxiety without taking medication. I will recommend her to more people. Thank you Ms Stephy."
+    },
+    {
+      name: "Ms. Elizabeth",
+      rating: 5,
+      text: "Ms. Stephy is truly inspiring and has greatly motivated my daughter to develop a deep love for the Mandarin language through her creative and psychotherapeutic approach. Under Ms. Stephy’s guidance, my daughter has become remarkably fluent in Mandarin an impressive achievement, especially considering that we come from Russia. Thank you, Ms. Stephy, for your dedication and for nurturing my daughter’s growth with such compassion and creativity."
     }
   ];
 
